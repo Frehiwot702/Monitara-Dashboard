@@ -130,7 +130,7 @@ export default function App() {
         {!code && <p className='text-center text-gray-500'>Enter your project code to view logs</p>}
         {code && (loading ? <p className='text-center text-gray-500 animate-pulse'>Loading logs...</p> : <LogList logs={logs} />)}
       </div>
-
+      {error && <div className='text-red-500 text-center'>{error}</div>}
       {
         openHowTo && (
           <HowTo/>

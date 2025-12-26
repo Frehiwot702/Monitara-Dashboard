@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import LogList from '../components/LogList';
 
 const Logs = () => {
