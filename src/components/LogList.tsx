@@ -76,9 +76,12 @@ export default function LogList({ logs }: { logs: Log[] }) {
                 <h3 className='w-fit text-[#f1cfd7]'>
                   {format(new Date(log.timestamp), 'HH:mm:ss')}
                 </h3>
+                <h3 className='w-fit'>
+                  {log.type}
+                </h3>
                 <div className='relative' style={{
                     color: log.type.includes('error') || log.type.includes('not')  ? '#FF6B6B' :
-                           log.type.includes('success') ? '#4ADE80' :
+                           log.type.includes('success') ? '#367588' :
                            log.type.includes('payment') ? '#60A5FA' : 'white'
                   }}>
                   <pre >
@@ -94,8 +97,8 @@ export default function LogList({ logs }: { logs: Log[] }) {
       <div className='w-full text-center space-x-10 py-10 text-sm'>
         <button 
             style={{
-                backgroundColor: currentPage === 1 ? '#ddd' : '#004d99',
-                color: 'white',  
+                backgroundColor: currentPage === 1 ? '#ddd' : '#F2B5C4',
+                color: 'black',  
                 cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
             }}
             onClick={goToPrevPage} 
@@ -106,13 +109,13 @@ export default function LogList({ logs }: { logs: Log[] }) {
 
         <button
             style={{
-                backgroundColor: currentPage === totalPages ? '#ddd' : '#004d99',
-                color: 'white',  
+                backgroundColor: currentPage === totalPages ? '#ddd' : '#F2B5C4',
+                color: 'black',  
                 cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
             }}
             onClick={goToNextPage}
             disabled={currentPage === totalPages}
-            className='bg-gray-100 px-5 py-2 rounded-md'>Next</button>
+            className='bg-gray-500 px-5 py-2 rounded-md '>Next</button>
       </div>
     </div>
   );
