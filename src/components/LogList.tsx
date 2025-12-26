@@ -32,7 +32,7 @@ export default function LogList({ logs }: { logs: Log[] }) {
   return (
     <div className='h-full border border-white p-5 rounded-sm'>
       {logs.length === 0 ? (
-        <p className='text-gray-400 text-center'>No logs yet. Make a test payment!</p>
+        <p className='text-gray-400 text-center'>No logs yet.</p>
       ) : (
         // <table style={{ width: '100%' }} className='rounded-lg'>
         //   <thead className='py-2 bg-gray-100 rounded-4xl text-gray-600 text-sm md:text-md' >
