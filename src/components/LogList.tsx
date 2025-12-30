@@ -81,8 +81,8 @@ export default function LogList({ logs }: { logs: Log[] }) {
                 </h3>
                 <div className='relative' style={{
                     color: log.type.includes('error') || log.type.includes('not')  ? '#FF6B6B' :
-                           log.type.includes('success') ? '#367588' :
-                           log.type.includes('payment') ? '#60A5FA' : 'white'
+                           log.type.includes('success') ? '#52d29d' :
+                           log.type.includes('payment') ? '#7DF9FF' : 'white'
                   }}>
                   <pre >
                     {JSON.stringify(log.data, null, 2)}
